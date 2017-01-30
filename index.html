@@ -14,12 +14,12 @@
       <div class="column is-half is-offset-one-quarter content">
 
         <section>
-          <div class="card">
+          <div class="card" v-for="item in items">
             <div class="card-header">
-              <p class="card-header-title" v-for="item in items">{{ addTitle(item) }}</p>
+              <p class="card-header-title">{{ item.title }}</p>
             </div>
             <div class="card-content">
-              <p v-for="item in items">{{ addContent(item) }}</p>
+              <p v-for="item in items">{{ item.content }}</p>
             </div>
             <footer class="card-footer">
               <a class="card-footer-item">Edit</a>
