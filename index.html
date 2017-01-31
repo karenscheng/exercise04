@@ -19,7 +19,7 @@
               <p class="card-header-title">{{ item.title }}</p>
             </div>
             <div class="card-content">
-              <p v-for="item in items">{{ item.content }}</p>
+              <p>{{ item.content }}</p>
             </div>
             <footer class="card-footer">
               <a class="card-footer-item">Edit</a>
@@ -43,7 +43,7 @@
           </div>
           <div class="control">
             <!-- this should only be visible if we are editing -->
-            <a class="button">Cancel</a>
+            <a class="button" @click="cancel">Cancel</a>
           </div>
         </section>
 

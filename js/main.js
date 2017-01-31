@@ -20,7 +20,12 @@ new Vue({
       return `${c.content}`;
     },
     removeItem (i){
-      console.log(i);
+      var index = this.items.indexOf(i);
+      this.items.splice(index, 1);
+    },
+    cancel() {
+      this.titleInput = '';
+      this.contentInput = '';
     }
   },
   data: {
@@ -28,8 +33,8 @@ new Vue({
     contentInput: '',
     items: [
       {
-        title: 'Learn how to code',
-        content: 'Learn Vue.js'
+        title: 'Sample To Do Item',
+        content: 'Do Stuff'
       }
     ]
   },
